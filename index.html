@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Siqueira Estratégia — Marketing estratégico para negócios locais em Nazareno, Lavras e São João del Rei. Produção de conteúdo, tráfego pago e soluções integradas.">
+<title>Siqueira Estratégia | Marketing para negócios locais</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<!-- Meta Pixel Code — substitua SEU_PIXEL_ID pelo ID real -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','SEU_PIXEL_ID');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+:root{--navy:#0b1829;--navy2:#112240;--green:#1db954;--green2:#16a347;--blue:#1a7fe8;--white:#f0f4ff;--muted:#8899aa;--card:#152035}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:'Syne',sans-serif;line-height:1.1}
+h1{font-size:clamp(2.4rem,5.5vw,4rem);font-weight:800}
+h2{font-size:clamp(1.7rem,3.8vw,2.6rem);font-weight:700}
+h3{font-size:1.2rem;font-weight:700}
+.accent{color:var(--green)}
+.tag{display:inline-block;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:.75rem}
+.container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+section{padding:5rem 0;position:relative;z-index:1}
+.divider{width:60px;height:3px;background:var(--green);margin:1.2rem 0 2rem;border-radius:2px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(11,24,41,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-logo{display:flex;align-items:center;gap:.6rem}
+.nav-logo img{width:36px;height:36px;border-radius:50%;object-fit:cover}
+.nav-logo span{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem}
+.nav-cta{background:var(--green);color:#0b1829;padding:.5rem 1.2rem;border-radius:6px;font-weight:600;font-size:.9rem;text-decoration:none;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--green2)}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;padding-top:5rem;background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(26,127,232,.13) 0%,transparent 60%),radial-gradient(ellipse 50% 50% at 20% 80%,rgba(29,185,84,.09) 0%,transparent 55%)}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(29,185,84,.12);border:1px solid rgba(29,185,84,.3);padding:.35rem .9rem;border-radius:999px;font-size:.8rem;color:var(--green);font-weight:600;margin-bottom:1.5rem}
+.hero-badge::before{content:'●';font-size:.5rem;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-title em{font-style:normal;background:linear-gradient(135deg,var(--green),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{color:var(--muted);font-size:1.05rem;margin:1.5rem 0 2.5rem;max-width:480px}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--green);color:#0b1829;padding:.85rem 1.8rem;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;transition:all .2s;display:inline-flex;align-items:center;gap:.5rem}
+.btn-primary:hover{background:var(--green2);transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(255,255,255,.2);color:var(--white);padding:.85rem 1.8rem;border-radius:8px;font-weight:600;font-size:1rem;text-decoration:none;transition:all .2s}
+.btn-ghost:hover{border-color:var(--green);color:var(--green)}
+.hero-img-wrap{position:relative}
+.hero-img-wrap img{width:100%;border-radius:16px;box-shadow:0 32px 80px rgba(0,0,0,.5);display:block}
+.hero-card{position:absolute;bottom:-1.5rem;left:-1.5rem;background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1rem 1.2rem;display:flex;align-items:center;gap:.75rem;box-shadow:0 8px 32px rgba(0,0,0,.4)}
+.hero-card-icon{font-size:1.5rem}
+.hero-card p{font-size:.8rem;color:var(--muted);margin-bottom:.1rem}
+.hero-card strong{font-size:.95rem;color:var(--white)}
+.hero-stats{display:flex;gap:2.5rem;margin-top:2.5rem}
+.stat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--green)}
+.stat-label{font-size:.82rem;color:var(--muted)}
+
+/* DOR */
+#dor{background:var(--navy2)}
+.dor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.dor-card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:1.5rem;border-left:3px solid var(--green);transition:transform .2s}
+.dor-card:hover{transform:translateY(-4px)}
+.dor-card .icon{font-size:1.8rem;margin-bottom:.75rem}
+.dor-card p{color:var(--muted);font-size:.95rem}
+
+/* SERVIÇOS */
+.servicos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:3rem}
+.servico-card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:1.75rem;transition:all .25s}
+.servico-card:hover{border-color:var(--green);box-shadow:0 0 0 1px var(--green),0 12px 40px rgba(29,185,84,.12);transform:translateY(-4px)}
+.servico-icon{width:48px;height:48px;border-radius:10px;background:rgba(29,185,84,.12);border:1px solid rgba(29,185,84,.25);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1rem}
+.servico-card p{color:var(--muted);font-size:.92rem;margin-top:.5rem}
+
+/* PACOTES */
+#pacotes{background:var(--navy2)}
+.pacotes-tabs{display:flex;gap:.5rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.tab-btn{padding:.55rem 1.2rem;border-radius:6px;border:1px solid rgba(255,255,255,.15);background:transparent;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:.9rem;cursor:pointer;transition:all .2s}
+.tab-btn.active{background:var(--green);color:#0b1829;font-weight:700;border-color:var(--green)}
+.tab-btn:hover:not(.active){border-color:var(--green);color:var(--green)}
+.pacotes-panel{display:none}
+.pacotes-panel.active{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.pacote-card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:1.75rem;position:relative;transition:all .25s;display:flex;flex-direction:column}
+.pacote-card.destaque{border-color:var(--green);box-shadow:0 0 0 1px var(--green)}
+.pacote-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--green);color:#0b1829;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .8rem;border-radius:999px;white-space:nowrap}
+.pacote-nome{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:.25rem}
+.pacote-preco{font-size:2.1rem;font-weight:800;color:var(--green);font-family:'Syne',sans-serif;margin:.5rem 0}
+.pacote-preco span{font-size:1rem;font-weight:400;color:var(--muted)}
+.pacote-desc{color:var(--muted);font-size:.88rem;margin-bottom:1rem;flex:1}
+.pacote-items{list-style:none;margin-bottom:1.5rem}
+.pacote-items li{font-size:.88rem;color:var(--muted);padding:.3rem 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:flex-start;gap:.5rem}
+.pacote-items li::before{content:'✓';color:var(--green);flex-shrink:0}
+.pacote-cta{display:block;text-align:center;background:rgba(29,185,84,.12);border:1px solid rgba(29,185,84,.3);color:var(--green);padding:.7rem;border-radius:8px;font-weight:600;font-size:.9rem;text-decoration:none;transition:all .2s;margin-top:auto}
+.pacote-cta:hover,.pacote-card.destaque .pacote-cta{background:var(--green);color:#0b1829}
+.preco-nota{margin-top:2rem;padding:1rem 1.5rem;background:rgba(26,127,232,.08);border:1px solid rgba(26,127,232,.2);border-radius:10px;color:var(--muted);font-size:.9rem;text-align:center}
+
+/* PROCESSO */
+.processo-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem;position:relative}
+.processo-steps::before{content:'';position:absolute;top:1.4rem;left:calc(12.5% + 1rem);right:calc(12.5% + 1rem);height:2px;background:linear-gradient(90deg,var(--green),var(--blue));z-index:0}
+.step{position:relative;z-index:1;text-align:center}
+.step-num{width:44px;height:44px;border-radius:50%;background:var(--green);color:#0b1829;font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 0 0 6px rgba(29,185,84,.15)}
+.step h3{font-size:.95rem;margin-bottom:.4rem}
+.step p{color:var(--muted);font-size:.83rem}
+
+/* SOBRE */
+.sobre-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.sobre-img{position:relative}
+.sobre-img img{width:100%;border-radius:16px;display:block;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.sobre-floater{position:absolute;top:-1rem;right:-1rem;background:var(--green);color:#0b1829;padding:.6rem 1rem;border-radius:8px;font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem}
+.sobre-text p{color:var(--muted);margin-bottom:1rem}
+
+/* CAPTAÇÃO */
+.captacao-wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:3rem}
+.captacao-wrap img{width:100%;border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.captacao-list{list-style:none}
+.captacao-list li{display:flex;align-items:flex-start;gap:.75rem;padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.06);color:var(--muted);font-size:.92rem}
+.captacao-list li .ic{font-size:1.2rem;flex-shrink:0;margin-top:.05rem}
+.captacao-list li strong{display:block;color:var(--white);margin-bottom:.2rem}
+
+/* DEPOIMENTOS */
+#depoimentos{background:var(--navy2)}
+.depo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:3rem}
+.depo-card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:1.5rem}
+.depo-stars{color:var(--green);font-size:1rem;margin-bottom:.75rem}
+.depo-text{color:var(--muted);font-size:.92rem;margin-bottom:1.25rem;font-style:italic}
+.depo-author{display:flex;align-items:center;gap:.75rem}
+.depo-avatar{width:40px;height:40px;border-radius:50%;background:var(--green);color:#0b1829;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;flex-shrink:0}
+.depo-name{font-weight:600;font-size:.9rem}
+.depo-role{font-size:.8rem;color:var(--muted)}
+.depo-prints{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+.depo-print-wrap{border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.07);max-height:340px;overflow-y:auto}
+.depo-print-wrap img{width:100%;display:block}
+
+/* QUALIFICADOR */
+#qualificador{background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(29,185,84,.08) 0%,transparent 60%)}
+.qualif-box{max-width:680px;margin:0 auto;background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:2.5rem;text-align:center}
+.qualif-step{display:none}
+.qualif-step.active{display:block}
+.qualif-question{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:1.5rem}
+.qualif-options{display:flex;flex-direction:column;gap:.75rem;text-align:left;margin-bottom:1.5rem}
+.qualif-opt{display:flex;align-items:center;gap:.75rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:1rem 1.25rem;cursor:pointer;transition:all .2s;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.qualif-opt:hover{border-color:var(--green);background:rgba(29,185,84,.08)}
+.qualif-opt.selected{border-color:var(--green);background:rgba(29,185,84,.12)}
+.qualif-opt-icon{font-size:1.3rem;flex-shrink:0}
+.qualif-opt-text strong{display:block;font-size:.95rem;margin-bottom:.1rem}
+.qualif-opt-text span{font-size:.82rem;color:var(--muted)}
+.qualif-nav{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.qualif-btn{padding:.75rem 2rem;border-radius:8px;font-weight:700;font-family:'DM Sans',sans-serif;font-size:1rem;cursor:pointer;border:none;transition:all .2s}
+.qualif-btn-next{background:var(--green);color:#0b1829}
+.qualif-btn-next:hover{background:var(--green2)}
+.qualif-btn-back{background:rgba(255,255,255,.08);color:var(--white)}
+.qualif-progress{display:flex;gap:.4rem;justify-content:center;margin-bottom:1.5rem}
+.qualif-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.15);transition:background .3s}
+.qualif-dot.done{background:var(--green)}
+.qualif-result{text-align:center;padding:1rem 0}
+.qualif-result .emoji{font-size:3rem;margin-bottom:1rem}
+.qualif-result h3{font-family:'Syne',sans-serif;font-size:1.4rem;margin-bottom:.75rem}
+.qualif-result p{color:var(--muted);margin-bottom:1.5rem}
+#waitlist-form{display:flex;flex-direction:column;gap:1rem;text-align:left;margin-top:1.5rem}
+#waitlist-form input,#waitlist-form select{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:.8rem 1rem;color:var(--white);font-family:'DM Sans',sans-serif;font-size:.95rem;width:100%}
+#waitlist-form input:focus,#waitlist-form select:focus{outline:none;border-color:var(--green)}
+#waitlist-form select option{background:var(--navy2)}
+
+/* FAQ */
+.faq-list{margin-top:2.5rem;max-width:760px;margin-left:auto;margin-right:auto}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.07)}
+.faq-q{width:100%;background:none;border:none;color:var(--white);font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:600;text-align:left;padding:1.25rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--green);flex-shrink:0;transition:transform .25s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--muted);font-size:.95rem}
+.faq-item.open .faq-a{max-height:200px}
+.faq-a p{padding-bottom:1.25rem}
+
+/* CTA FINAL */
+#cta-final{background:linear-gradient(135deg,rgba(29,185,84,.12) 0%,rgba(26,127,232,.08) 100%);border-top:1px solid rgba(29,185,84,.15);text-align:center}
+#cta-final h2{margin-bottom:1rem}
+#cta-final p{color:var(--muted);max-width:520px;margin:0 auto 2rem}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* FOOTER */
+footer{background:var(--navy2);border-top:1px solid rgba(255,255,255,.06);padding:2rem 1.5rem;text-align:center}
+footer p{color:var(--muted);font-size:.85rem}
+footer a{color:var(--green);text-decoration:none}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero-inner,.sobre-inner,.captacao-wrap{grid-template-columns:1fr;gap:2.5rem}
+  .hero-stats{gap:1.5rem}
+  .nav-cta{font-size:.8rem;padding:.45rem .9rem}
+  .pacotes-tabs{gap:.35rem}
+  .tab-btn{font-size:.8rem;padding:.45rem .9rem}
+  .hero-img-wrap{order:-1}
+  .hero-card{left:0;right:0;bottom:-1rem}
+  .hero-stats{gap:1.5rem}
+  .dor-grid{grid-template-columns:1fr}
+  .processo-steps{grid-template-columns:1fr 1fr}
+  .processo-steps::before{display:none}
+  .depo-prints{grid-template-columns:1fr}
+  .qualif-box{padding:1.75rem 1.25rem}
+}
+@media(max-width:480px){
+  h1{font-size:2.1rem}
+  .processo-steps{grid-template-columns:1fr}
+  section{padding:3.5rem 0}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <img src="siqueira_estrategia_fundo_transparente.png" alt="Siqueira Estratégia">
+    <span>Siqueira Estratégia</span>
+  </div>
+  <a href="https://wa.me/5532985208228?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais." class="nav-cta" target="_blank">Falar no WhatsApp</a>
+</nav>
+
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">Nazareno · Lavras · São João del Rei</div>
+        <h1>Marketing estratégico para negócios locais que precisam <em>sair do improviso.</em></h1>
+        <p class="hero-sub">A Siqueira Estratégia organiza sua comunicação, produz conteúdo de qualidade, gerencia seus anúncios e transforma presença digital em vendas reais.</p>
+        <div class="hero-btns">
+          <a href="#qualificador" class="btn-primary">→ Quero uma análise gratuita</a>
+          <a href="#servicos" class="btn-ghost">Ver como funciona</a>
+        </div>
+        <div class="hero-stats">
+          <div><div class="stat-num">+30</div><div class="stat-label">negócios atendidos</div></div>
+          <div><div class="stat-num">3x</div><div class="stat-label">mais mensagens WhatsApp</div></div>
+          <div><div class="stat-num">R$5k+</div><div class="stat-label">faturamento mín. clientes</div></div>
+        </div>
+      </div>
+      <div class="hero-img-wrap reveal">
+        <img src="Pablo capa melhor.PNG" alt="Pablo Siqueira — Siqueira Estratégia" loading="eager">
+        <div class="hero-card">
+          <div class="hero-card-icon">📍</div>
+          <div><p>Atendendo em</p><strong>Sul de Minas Gerais</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dor" style="background:var(--navy2)">
+  <div class="container">
+    <div class="tag">O problema real</div>
+    <h2>Seu negócio pode ser bom.<br>Mas se a comunicação está solta,<br><span class="accent">o cliente não percebe.</span></h2>
+    <div class="divider"></div>
+    <div class="dor-grid">
+      <div class="dor-card reveal"><div class="icon">📱</div><h3>Posts sem retorno</h3><p>Você posta todo dia mas o WhatsApp não reage. O conteúdo sai, mas não gera procura de verdade.</p></div>
+      <div class="dor-card reveal"><div class="icon">💸</div><h3>Verba desperdiçada</h3><p>Impulsionamento sem estratégia queima dinheiro. O anúncio roda, mas sem resultado concreto.</p></div>
+      <div class="dor-card reveal"><div class="icon">🎯</div><h3>Comunicação sem direção</h3><p>Cada post é uma ação solta. Falta planejamento, frequência e uma mensagem que converte.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="container">
+    <div class="tag">O que fazemos</div>
+    <h2>Quatro frentes de atuação.<br><span class="accent">Uma solução sob medida.</span></h2>
+    <div class="divider"></div>
+    <div class="servicos-grid">
+      <div class="servico-card reveal"><div class="servico-icon">🎬</div><h3>Produção de Conteúdo</h3><p>Roteiro, captação presencial e edição profissional. Reels, institucionais e ofertas que representam o seu negócio de verdade.</p></div>
+      <div class="servico-card reveal"><div class="servico-icon">📣</div><h3>Tráfego Pago</h3><p>Gestão de anúncios no Meta Ads e Google Ads com planejamento estratégico, segmentação precisa e análise de desempenho.</p></div>
+      <div class="servico-card reveal"><div class="servico-icon">⚡</div><h3>Solução Integrada</h3><p>Produção + estratégia + anúncios trabalhando juntos. Para quem quer terceirizar a frente digital com qualidade e constância.</p></div>
+      <div class="servico-card reveal"><div class="servico-icon">🤖</div><h3>Automações e Captação</h3><p>Atendimento automatizado no WhatsApp, formulários inteligentes, captação de leads e organização do processo de vendas.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="campo">
+  <div class="container">
+    <div class="tag">Diferencial local</div>
+    <h2>A gente <span class="accent">vai até o seu negócio.</span></h2>
+    <div class="divider"></div>
+    <div class="captacao-wrap">
+      <img src="1668A3EA.PNG" alt="Captação em campo — barbearia" style="aspect-ratio:1/1;object-fit:cover" alt="Pablo captando conteúdo em barbearia" class="reveal">
+      <ul class="captacao-list">
+        <li><span class="ic">📍</span><div><strong>Presença real na sua empresa</strong>Para clientes da região, vamos até você com equipamento profissional completo.</div></li>
+        <li><span class="ic">🎥</span><div><strong>Equipamento profissional</strong>Gimbal, softbox, câmera dedicada. Conteúdo com qualidade de produtora.</div></li>
+        <li><span class="ic">🧭</span><div><strong>Direção criativa incluída</strong>Chegamos com roteiro pronto. Você só precisa aparecer.</div></li>
+        <li><span class="ic">🇧🇷</span><div><strong>Atendimento nacional</strong>Se você é de fora da região e já tem criativos, podemos trabalhar na gestão e estratégia.</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="pacotes" style="background:var(--navy2)">
+  <div class="container">
+    <div class="tag">Estruturas de atendimento</div>
+    <h2>Existe uma estrutura<br><span class="accent">para o seu momento.</span></h2>
+    <div class="divider"></div>
+    <p style="color:var(--muted);max-width:580px;margin-bottom:2rem">A verba de anúncios não está incluída nos pacotes de tráfego — ela é investida separadamente por você e fica 100% na sua conta.</p>
+    <div class="pacotes-tabs">
+      <button class="tab-btn active" onclick="showTab('producao',this)">🎬 Produção</button>
+      <button class="tab-btn" onclick="showTab('trafego',this)">📣 Marketing e Tráfego</button>
+      <button class="tab-btn" onclick="showTab('integrado',this)">⚡ Integrado</button>
+    </div>
+    <div class="pacotes-panel active" id="tab-producao">
+      <div class="pacote-card reveal"><div class="pacote-nome">Presença</div><div class="pacote-preco">R$ 347<span>/único</span></div><div class="pacote-desc">Campanha pontual ou apresentação da empresa.</div><ul class="pacote-items"><li>1 vídeo premium avulso (até 1 min)</li><li>Captação, edição, legenda e trilha</li><li>Acabamento profissional</li><li>1 ajuste incluso</li></ul><a href="#qualificador" class="pacote-cta">Quero esse pacote</a></div>
+      <div class="pacote-card destaque reveal"><div class="pacote-badge">Mais popular</div><div class="pacote-nome">Constância</div><div class="pacote-preco">R$ 597<span>/mês</span></div><div class="pacote-desc">Para comércio local que quer aparecer com frequência.</div><ul class="pacote-items"><li>4 vídeos curtos mensais</li><li>Captação objetiva e edição profissional</li><li>Legendas e acabamento visual</li><li>1 ajuste por vídeo</li></ul><a href="#qualificador" class="pacote-cta">Quero esse pacote</a></div>
+      <div class="pacote-card reveal"><div class="pacote-nome">Destaque</div><div class="pacote-preco">R$ 897<span>/mês</span></div><div class="pacote-desc">Frequência com uma peça mais forte no mês.</div><ul class="pacote-items"><li>1 vídeo premium + 4 vídeos curtos</li><li>Direção criativa básica inclusa</li><li>Edição, legendas e acabamento</li><li>Para marcas que querem autoridade</li></ul><a href="#qualificador" class="pacote-cta">Quero esse pacote</a></div>
+    </div>
+    <div class="pacotes-panel" id="tab-trafego">
+      <div class="pacote-card reveal"><div class="pacote-nome">Direção</div><div class="pacote-preco">R$ 700<span>/mês</span></div><div class="pacote-desc">Para quem já grava e quer começar a anunciar com direção.</div><ul class="pacote-items"><li>Planejamento básico mensal</li><li>Direcionamento de conteúdo</li><li>Gestão básica de tráfego pago</li><li>Acompanhamento das métricas</li></ul><a href="#qualificador" class="pacote-cta">Quero esse pacote</a></div>
+      <div class="pacote-card destaque reveal"><div class="pacote-badge">Recomendado</div><div class="pacote-nome">Crescimento</div><div class="pacote-preco">R$ 1.000<span>/mês</span></div><div class="pacote-desc">Para negócios que querem resultado real com anúncios.</div><ul class="pacote-items"><li>Planejamento estratégico mensal</li><li>Gestão de tráfego pago</li><li>Organização de campanhas e testes</li><li>Análise de desempenho</li></ul><a href="#qualificador" class="pacote-cta">Quero esse pacote</a></div>
+      <div class="pacote-card reveal"><div class="pacote-nome">Expansão</div><div class="pacote-preco">R$ 1.400<span>/mês</span></div><div class="pacote-desc">Para empresas com maior ambição comercial.</div><ul class="pacote-items"><li>Gestão estratégica completa</li><li>Acompanhamento contínuo</li><li>Análise e ajustes frequentes</li><li>Suporte prioritário</li></ul><a href="#qualificador" class="pacote-cta">Quero esse pacote</a></div>
+    </div>
+    <div class="pacotes-panel" id="tab-integrado">
+      <div class="pacote-card reveal"><div class="pacote-nome">Impulso</div><div class="pacote-preco">R$ 1.097<span>/mês</span></div><div class="pacote-desc">Entrada completa para comércio local organizado.</div><ul class="pacote-items"><li>4 vídeos curtos por mês</li><li>Planejamento e direcionamento</li><li>Gestão básica de tráfego</li><li>Acompanhamento de desempenho</li></ul><a href="#qualificador" class="pacote-cta">Quero esse pacote</a></div>
+      <div class="pacote-card destaque reveal"><div class="pacote-badge">Mais completo</div><div class="pacote-nome">Autoridade</div><div class="pacote-preco">R$ 1.397<span>/mês</span></div><div class="pacote-desc">Presença forte com produção e tráfego juntos.</div><ul class="pacote-items"><li>1 vídeo premium + 4 curtos/mês</li><li>Planejamento estratégico completo</li><li>Gestão de tráfego e análise mensal</li><li>Acompanhamento próximo</li></ul><a href="#qualificador" class="pacote-cta">Quero esse pacote</a></div>
+      <div class="pacote-card reveal"><div class="pacote-nome">Domínio</div><div class="pacote-preco">R$ 1.797<span>/mês</span></div><div class="pacote-desc">Para quem quer terceirizar o digital com estrutura robusta.</div><ul class="pacote-items"><li>Produção mensal mais robusta</li><li>Marketing e tráfego integrados</li><li>Direção estratégica completa</li><li>Atendimento prioritário</li></ul><a href="#qualificador" class="pacote-cta">Quero esse pacote</a></div>
+    </div>
+    <div class="preco-nota reveal">💡 <strong>Verba de anúncios não inclusa.</strong> Recomendamos mínimo de R$ 500/mês para tráfego pago. Projetos a partir de R$ 347.</div>
+  </div>
+</section>
+
+<section id="processo">
+  <div class="container">
+    <div class="tag">Como funciona</div>
+    <h2>Do primeiro contato<br><span class="accent">à primeira venda.</span></h2>
+    <div class="divider"></div>
+    <div class="processo-steps">
+      <div class="step reveal"><div class="step-num">1</div><h3>Análise inicial</h3><p>Entendemos o momento do negócio, o público e onde está o gargalo.</p></div>
+      <div class="step reveal"><div class="step-num">2</div><h3>Indicação do caminho</h3><p>Conteúdo, tráfego ou solução integrada — o caminho certo para o seu momento.</p></div>
+      <div class="step reveal"><div class="step-num">3</div><h3>Proposta sob medida</h3><p>Só depois de entender seu negócio apresentamos a proposta. Sem empurrar pacote.</p></div>
+      <div class="step reveal"><div class="step-num">4</div><h3>Execução com direção</h3><p>Planejamento, produção, campanhas e acompanhamento conforme o escopo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="container">
+    <div class="sobre-inner">
+      <div class="sobre-img reveal">
+        <img src="IMG_3142.PNG" alt="Pablo Siqueira nas ruas históricas de Minas Gerais">
+        <div class="sobre-floater">Feito em MG 🏔️</div>
+      </div>
+      <div class="sobre-text">
+        <div class="tag">Quem está por trás</div>
+        <h2>Sou daqui.<br><span class="accent">Conheço a realidade</span><br>do comércio local.</h2>
+        <div class="divider"></div>
+        <p>A Siqueira Estratégia nasce da realidade de quem entende o comércio local: agenda cheia, equipe enxuta, pouca margem para desperdício e necessidade de divulgar melhor sem complicar o que já é corrido.</p>
+        <p>Não vendemos pacote antes de entender o seu negócio. O primeiro passo é sempre uma análise — e só depois indicamos o caminho certo.</p>
+        <a href="#qualificador" class="btn-primary" style="margin-top:.5rem">→ Quero uma análise gratuita</a>
+      </div>
+    </div>
+    <div class="captacao-wrap">
+      <div>
+        <div class="tag">Reunião estratégica</div>
+        <h3 style="font-size:1.5rem;margin-bottom:1rem">A gente senta,<br><span class="accent">escuta e planeja junto.</span></h3>
+        <p style="color:var(--muted)">Cada cliente recebe atenção real. Não somos uma agência que some após o contrato — estamos junto na execução, nos ajustes e nos resultados.</p>
+      </div>
+      <img src="IMG_3146.PNG" alt="Reunião com cliente" alt="Reunião de planejamento com cliente" class="reveal">
+    </div>
+  </div>
+</section>
+
+<section id="depoimentos" style="background:var(--navy2)">
+  <div class="container">
+    <div class="tag">Resultados reais</div>
+    <h2>Negócios locais que publicam<br><span class="accent">com estratégia</span> vendem mais.</h2>
+    <div class="divider"></div>
+    <div class="depo-grid">
+      <div class="depo-card reveal"><div class="depo-stars">★★★★★</div><p class="depo-text">"Fiz 5 orçamentos em Santo Antônio do Monte e fechei 3. O conteúdo trouxe visibilidade que eu nunca tive antes."</p><div class="depo-author"><div class="depo-avatar">G</div><div><div class="depo-name">Glauber Silva</div><div class="depo-role">Autônomo · Nazareno, MG</div></div></div></div>
+      <div class="depo-card reveal"><div class="depo-stars">★★★★★</div><p class="depo-text">"Investia em impulsionamento e não via resultado. Com a gestão de tráfego da Siqueira Estratégia, meu restaurante começou a lotar nos fins de semana."</p><div class="depo-author"><div class="depo-avatar">R</div><div><div class="depo-name">Ricardo M.</div><div class="depo-role">Restaurante · Sul de Minas, MG</div></div></div></div>
+      <div class="depo-card reveal"><div class="depo-stars">★★★★★</div><p class="depo-text">"Ficou bom demais cara!! Top top demais... Valeu mesmo meu amigo!" — após entrega do primeiro vídeo da campanha.</p><div class="depo-author"><div class="depo-avatar">H</div><div><div class="depo-name">Hélio Planejador</div><div class="depo-role">Planejamento Financeiro · MG</div></div></div></div>
+    </div>
+    <div class="depo-prints reveal">
+      <div class="depo-print-wrap"><img src="IMG_3138.jpg" alt="Depoimento Hélio Planejador"></div>
+      <div class="depo-print-wrap"><img src="print_glauber.png" alt="Depoimento Glauber Silva"></div>
+    </div>
+  </div>
+</section>
+
+<section id="qualificador">
+  <div class="container">
+    <div class="tag" style="display:block;text-align:center">Primeiro passo</div>
+    <h2 style="text-align:center;margin-bottom:.5rem">Descubra qual estrutura<br><span class="accent">faz sentido para você.</span></h2>
+    <p style="text-align:center;color:var(--muted);margin-bottom:3rem">Responda 3 perguntas rápidas. Nosso sistema analisa seu perfil e indica o próximo passo.</p>
+    <div class="qualif-box">
+      <div class="qualif-progress">
+        <div class="qualif-dot done" id="dot0"></div>
+        <div class="qualif-dot" id="dot1"></div>
+        <div class="qualif-dot" id="dot2"></div>
+      </div>
+      <div class="qualif-step active" id="qs1">
+        <div class="qualif-question">Qual é o tamanho do seu perfil no Instagram?</div>
+        <div class="qualif-options">
+          <label class="qualif-opt" onclick="selectOpt(this,'ig','zero')"><span class="qualif-opt-icon">🆕</span><div class="qualif-opt-text"><strong>Ainda não tenho perfil</strong><span>Estou começando do zero</span></div></label>
+          <label class="qualif-opt" onclick="selectOpt(this,'ig','small')"><span class="qualif-opt-icon">📈</span><div class="qualif-opt-text"><strong>Menos de 500 seguidores</strong><span>Perfil ainda em construção</span></div></label>
+          <label class="qualif-opt" onclick="selectOpt(this,'ig','mid')"><span class="qualif-opt-icon">🚀</span><div class="qualif-opt-text"><strong>500 a 10 mil seguidores</strong><span>Perfil ativo com audiência</span></div></label>
+          <label class="qualif-opt" onclick="selectOpt(this,'ig','big')"><span class="qualif-opt-icon">🌟</span><div class="qualif-opt-text"><strong>10 mil a 30 mil seguidores</strong><span>Perfil consolidado</span></div></label>
+        </div>
+        <div class="qualif-nav"><button class="qualif-btn qualif-btn-next" onclick="nextStep(1)">Próximo →</button></div>
+      </div>
+      <div class="qualif-step" id="qs2">
+        <div class="qualif-question">Qual é o faturamento mensal aproximado do seu negócio?</div>
+        <div class="qualif-options">
+          <label class="qualif-opt" onclick="selectOpt(this,'fat','baixo')"><span class="qualif-opt-icon">💰</span><div class="qualif-opt-text"><strong>Menos de R$ 5.000/mês</strong><span>Negócio em fase inicial</span></div></label>
+          <label class="qualif-opt" onclick="selectOpt(this,'fat','medio')"><span class="qualif-opt-icon">💰💰</span><div class="qualif-opt-text"><strong>R$ 5.000 a R$ 20.000/mês</strong><span>Negócio estabelecido</span></div></label>
+          <label class="qualif-opt" onclick="selectOpt(this,'fat','alto')"><span class="qualif-opt-icon">💰💰💰</span><div class="qualif-opt-text"><strong>Acima de R$ 20.000/mês</strong><span>Negócio em crescimento</span></div></label>
+        </div>
+        <div class="qualif-nav"><button class="qualif-btn qualif-btn-back" onclick="prevStep(2)">← Voltar</button><button class="qualif-btn qualif-btn-next" onclick="nextStep(2)">Próximo →</button></div>
+      </div>
+      <div class="qualif-step" id="qs3">
+        <div class="qualif-question">Onde fica seu negócio?</div>
+        <div class="qualif-options">
+          <label class="qualif-opt" onclick="selectOpt(this,'loc','local')"><span class="qualif-opt-icon">📍</span><div class="qualif-opt-text"><strong>Nazareno, Lavras, São João del Rei ou região</strong><span>Sul de Minas Gerais</span></div></label>
+          <label class="qualif-opt" onclick="selectOpt(this,'loc','mg')"><span class="qualif-opt-icon">🏔️</span><div class="qualif-opt-text"><strong>Outro município de Minas Gerais</strong><span>Interior ou capital</span></div></label>
+          <label class="qualif-opt" onclick="selectOpt(this,'loc','brasil')"><span class="qualif-opt-icon">🇧🇷</span><div class="qualif-opt-text"><strong>Outro estado do Brasil</strong><span>Já tenho criativos próprios</span></div></label>
+        </div>
+        <div class="qualif-nav"><button class="qualif-btn qualif-btn-back" onclick="prevStep(3)">← Voltar</button><button class="qualif-btn qualif-btn-next" onclick="analisarLead()">Analisar meu perfil ✨</button></div>
+      </div>
+      <div class="qualif-step" id="qs-loading">
+        <div style="padding:2rem 0"><div style="font-size:2.5rem;margin-bottom:1rem;display:inline-block;animation:spin 1s linear infinite">⚙️</div><p style="color:var(--muted)">Analisando seu perfil...</p></div>
+      </div>
+      <div class="qualif-step" id="qs-ok">
+        <div class="qualif-result">
+          <div class="emoji">✅</div>
+          <h3>Seu perfil é elegível!</h3>
+          <p id="result-msg">Identificamos que seu negócio tem o perfil certo. Vamos conversar sem compromisso.</p>
+          <a id="result-wa" href="#" class="btn-primary" target="_blank" style="margin:0 auto .75rem;justify-content:center">→ Falar no WhatsApp agora</a><br>
+          <a href="#pacotes" class="btn-ghost" style="display:inline-flex;margin-top:.75rem">Ver pacotes disponíveis</a>
+        </div>
+      </div>
+      <div class="qualif-step" id="qs-espera">
+        <div class="qualif-result">
+          <div class="emoji">📋</div>
+          <h3>Você entrou na lista de espera!</h3>
+          <p>Agradecemos o interesse. Neste momento priorizamos perfis específicos — mas queremos te ajudar quando o momento for certo.</p>
+          <form id="waitlist-form" onsubmit="enviarEspera(event)">
+            <input type="text" id="wl-nome" placeholder="Seu nome" required>
+            <input type="text" id="wl-neg" placeholder="Nome do seu negócio" required>
+            <input type="tel" id="wl-tel" placeholder="WhatsApp com DDD" required>
+            <select id="wl-seg" required><option value="" disabled selected>Segmento do negócio</option><option>Restaurante / Alimentação</option><option>Salão / Barbearia / Estética</option><option>Comércio / Loja</option><option>Serviços</option><option>Saúde</option><option>Outro</option></select>
+            <button type="submit" class="qualif-btn qualif-btn-next" style="width:100%">Entrar na lista de espera</button>
+          </form>
+        </div>
+      </div>
+      <div class="qualif-step" id="qs-confirmado">
+        <div class="qualif-result">
+          <div class="emoji">🙏</div>
+          <h3>Cadastro realizado!</h3>
+          <p>Quando tivermos uma vaga compatível com seu perfil, entraremos em contato. Enquanto isso, acompanhe o conteúdo.</p>
+          <a href="https://instagram.com/siqueiraestrategia" class="btn-ghost" target="_blank" style="display:inline-flex;margin-top:.5rem">→ @siqueiraestrategia</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="tag" style="display:block;text-align:center">Dúvidas frequentes</div>
+    <h2 style="text-align:center">Perguntas que chegam<br><span class="accent">toda semana.</span></h2>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">A verba de anúncios está incluída no pacote?</button><div class="faq-a"><p>Não. A verba é investida separadamente por você e fica 100% na sua conta de anúncios. Recomendamos pelo menos R$ 500/mês para campanhas.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Vocês atendem negócios fora da região de Minas?</button><div class="faq-a"><p>Sim, mas para clientes de fora não realizamos captação presencial. O cliente precisa ter criativos próprios para a gestão de tráfego e estratégia.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Quanto tempo para ver resultado?</button><div class="faq-a"><p>Nos primeiros 30 dias já há mudança na consistência do conteúdo. Em 60 a 90 dias, engajamento e procura aparecem. Tráfego pago pode gerar leads já na primeira semana.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Preciso ter equipamento para gravar?</button><div class="faq-a"><p>Para clientes da região, não. Levamos equipamento profissional completo até seu negócio. Para clientes de fora, é necessário ter criativos próprios.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Como funciona o contrato?</button><div class="faq-a"><p>Contratos mensais renováveis. Sem fidelidade forçada — queremos clientes que ficam porque veem resultado.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="cta-final">
+  <div class="container">
+    <div class="tag" style="display:block;text-align:center">Pronto para começar?</div>
+    <h2>Quer entender o que faz mais<br>sentido para o seu negócio <span class="accent">agora?</span></h2>
+    <p>Antes de falar em pacote, a gente entende o seu momento. Pode ser vídeos, tráfego, ou reorganizar o atendimento. O primeiro passo é descobrir isso com clareza.</p>
+    <div class="cta-btns">
+      <a href="#qualificador" class="btn-primary">→ Fazer análise gratuita</a>
+      <a href="https://wa.me/5532985208228?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais." class="btn-ghost" target="_blank">Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Siqueira Estratégia · Nazareno, Minas Gerais · <a href="https://instagram.com/siqueiraestrategia" target="_blank">@siqueiraestrategia</a> · <a href="https://wa.me/5532985208228" target="_blank">WhatsApp</a></p>
+</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+function showTab(id,btn){
+  document.querySelectorAll('.pacotes-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+
+function toggleFaq(btn){
+  const item=btn.parentElement;
+  const wasOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!wasOpen)item.classList.add('open');
+}
+
+const respostas={};
+function selectOpt(el,key,val){
+  el.closest('.qualif-options').querySelectorAll('.qualif-opt').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');
+  respostas[key]=val;
+}
+function showQStep(id){
+  document.querySelectorAll('.qualif-step').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+function updateDots(n){
+  [0,1,2].forEach(i=>{const d=document.getElementById('dot'+i);if(d)d.classList.toggle('done',i<n)});
+}
+function nextStep(cur){
+  const keys=['ig','fat','loc'];
+  if(!respostas[keys[cur-1]]){alert('Selecione uma opção para continuar.');return;}
+  updateDots(cur);
+  showQStep('qs'+(cur+1));
+}
+function prevStep(cur){showQStep('qs'+(cur-1));updateDots(cur-2);}
+
+// ── Integração Supabase ──────────────────────────────────────────
+const SUPA_URL='https://fchhdazhmcfkahtrhntz.supabase.co';
+const SUPA_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZjaGhkYXpobWNma2FodHJobnR6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk3NjIwNDEsImV4cCI6MjA5NTMzODA0MX0.lc-QTIL6HyESY7io55Yzft1JOnlsuw3PmLPsdR7OEOw';
+
+async function salvarLeadSupabase(dados){
+  try{
+    await fetch(SUPA_URL+'/rest/v1/leads',{
+      method:'POST',
+      headers:{
+        'apikey':SUPA_KEY,
+        'Authorization':'Bearer '+SUPA_KEY,
+        'Content-Type':'application/json',
+        'Prefer':'return=minimal'
+      },
+      body:JSON.stringify({
+        nome: dados.nome||'Lead Landing Page',
+        telefone: dados.telefone||'',
+        origem: 'Landing Page',
+        status: 'Novo Lead',
+        notas: dados.notas||''
+      })
+    });
+  }catch(err){
+    console.warn('Supabase lead não salvo:',err);
+  }
+}
+// ────────────────────────────────────────────────────────────────
+
+async function analisarLead(){
+  if(!respostas.loc){alert('Selecione uma opção para continuar.');return;}
+  updateDots(3);
+  showQStep('qs-loading');
+  const igOk=respostas.ig==='mid'||respostas.ig==='big';
+  const fatOk=respostas.fat==='medio'||respostas.fat==='alto';
+  const locOk=respostas.loc==='local'||respostas.loc==='mg'||respostas.loc==='brasil';
+  const ok=igOk&&fatOk&&locOk;
+  const igMap={zero:'sem perfil ainda',small:'menos de 500 seguidores',mid:'500 a 10k seguidores',big:'10k a 30k seguidores'};
+  const fatMap={baixo:'menos de R$ 5k/mês',medio:'R$ 5k a R$ 20k/mês',alto:'acima de R$ 20k/mês'};
+  const locMap={local:'Sul de Minas (região)',mg:'Minas Gerais',brasil:'outro estado'};
+  const msg=encodeURIComponent('Olá Pablo! Vim pelo site da Siqueira Estratégia.\n\nMeu perfil:\n• Instagram: '+igMap[respostas.ig]+'\n• Faturamento: '+fatMap[respostas.fat]+'\n• Localização: '+locMap[respostas.loc]+'\n\nQuero saber mais sobre os serviços.');
+  await new Promise(r=>setTimeout(r,1600));
+  if(ok){
+    document.getElementById('result-wa').href='https://wa.me/5532985208228?text='+msg;
+    document.getElementById('result-msg').textContent='Perfil com '+igMap[respostas.ig]+', faturamento '+fatMap[respostas.fat]+', localização: '+locMap[respostas.loc]+'. Tudo certo — vamos conversar sobre a melhor estrutura para você.';
+    salvarLeadSupabase({
+      nome:'Lead Qualificado (Quiz)',
+      notas:'Instagram: '+igMap[respostas.ig]+' | Faturamento: '+fatMap[respostas.fat]+' | Localização: '+locMap[respostas.loc]
+    });
+    showQStep('qs-ok');
+  } else {
+    showQStep('qs-espera');
+  }
+}
+function enviarEspera(e){
+  e.preventDefault();
+  const nome=document.getElementById('wl-nome').value;
+  const neg=document.getElementById('wl-neg').value;
+  const tel=document.getElementById('wl-tel').value;
+  const seg=document.getElementById('wl-seg').value;
+  salvarLeadSupabase({
+    nome: nome,
+    telefone: tel,
+    notas: 'Negócio: '+neg+' | Segmento: '+seg+' | Lista de espera'
+  });
+  const msg=encodeURIComponent('LISTA DE ESPERA\nNome: '+nome+'\nNegócio: '+neg+'\nTel: '+tel+'\nSegmento: '+seg);
+  window.open('https://wa.me/5532985208228?text='+msg,'_blank');
+  showQStep('qs-confirmado');
+}
+</script>
+</body>
+</html>
