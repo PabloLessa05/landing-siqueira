@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <!-- Meta Pixel Code — substitua SEU_PIXEL_ID pelo ID real -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -195,6 +196,84 @@ footer a{color:var(--green);text-decoration:none}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:none}
 @keyframes spin{to{transform:rotate(360deg)}}
+
+/* ── NOVO QUIZ ─────────────────────────────────────────────────── */
+#qualificador{
+  --qa:rgba(255,91,52,1);--qa8:rgba(255,91,52,.08);--qa18:rgba(255,91,52,.18);
+  --qs:#16181f;--qc:#1b1e27;--ql:rgba(255,255,255,.09);
+  --qgold:#f5c451;--qok:#46d39a;--qr:20px;
+  padding:90px 22px;position:relative;overflow:hidden;
+  background:#0e0f13;display:flex;align-items:center
+}
+#qualificador::before{content:"";position:absolute;top:-160px;left:50%;transform:translateX(-50%);
+  width:680px;height:420px;background:radial-gradient(circle,var(--qa18),transparent 70%);pointer-events:none}
+#qualificador .qinner{max-width:680px;margin:0 auto;width:100%;position:relative;z-index:2}
+#qualificador .qhead{text-align:center;margin-bottom:38px}
+#qualificador .qeyebrow{font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--qa);margin-bottom:14px}
+#qualificador .qhead h2{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(1.8rem,4.2vw,2.7rem);
+  line-height:1.05;letter-spacing:-.02em;margin-bottom:12px;color:#f4f3ef}
+#qualificador .qhead p{color:#9b9fab;font-size:1.05rem;font-family:"Hanken Grotesk",sans-serif}
+#qualificador .qbox{background:var(--qc);border:1px solid var(--ql);border-radius:var(--qr);padding:38px 34px}
+#qualificador .qprog{display:flex;gap:8px;justify-content:center;margin-bottom:32px}
+#qualificador .qprog span{width:42px;height:5px;border-radius:100px;background:rgba(255,255,255,.12);transition:.3s}
+#qualificador .qprog span.on{background:var(--qa)}
+#qualificador .qq{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.45rem;
+  margin-bottom:24px;text-align:center;color:#f4f3ef}
+#qualificador .qopts{display:flex;flex-direction:column;gap:12px;margin-bottom:30px}
+#qualificador .qopt{display:flex;align-items:center;gap:16px;background:var(--qs);
+  border:1.5px solid var(--ql);border-radius:14px;padding:18px 20px;cursor:pointer;
+  transition:.2s;text-align:left;width:100%}
+#qualificador .qopt:hover{border-color:rgba(255,255,255,.28)}
+#qualificador .qopt.sel{border-color:var(--qa);background:var(--qa8)}
+#qualificador .qopt .em{font-size:1.5rem;flex:none}
+#qualificador .qopt b{display:block;font-size:1.02rem;font-weight:700;color:#f4f3ef;
+  font-family:"Hanken Grotesk",sans-serif}
+#qualificador .qopt .sub{font-size:.88rem;color:#9b9fab;font-family:"Hanken Grotesk",sans-serif}
+#qualificador .qopt .qcheck{margin-left:auto;width:22px;height:22px;border-radius:50%;
+  border:2px solid var(--ql);flex:none;display:grid;place-items:center;transition:.2s}
+#qualificador .qopt.sel .qcheck{border-color:var(--qa);background:var(--qa)}
+#qualificador .qopt.sel .qcheck::after{content:"✓";color:#fff;font-size:.72rem;font-weight:700}
+#qualificador .qnav{display:flex;justify-content:space-between;gap:12px}
+#qualificador .qbtn{font-family:"Hanken Grotesk",sans-serif;font-weight:700;font-size:1rem;
+  padding:14px 28px;border-radius:100px;border:1.5px solid var(--ql);background:transparent;
+  color:#f4f3ef;cursor:pointer;transition:.25s}
+#qualificador .qbtn:hover{border-color:#fff}
+#qualificador .qbtn.solid{background:var(--qa);border-color:var(--qa);color:#fff}
+#qualificador .qbtn.solid:hover{background:#e94a26}
+#qualificador .qbtn:disabled{opacity:.4;cursor:not-allowed}
+#qualificador .qbtn.hidden{visibility:hidden}
+#qualificador .qloading{text-align:center;padding:30px 0}
+#qualificador .qspin{width:48px;height:48px;border:4px solid rgba(255,255,255,.12);
+  border-top-color:var(--qa);border-radius:50%;margin:0 auto 20px;animation:qspin 1s linear infinite}
+@keyframes qspin{to{transform:rotate(360deg)}}
+#qualificador .qresult{text-align:center}
+#qualificador .qtick{width:64px;height:64px;border-radius:50%;background:rgba(70,211,154,.15);
+  color:var(--qok);display:grid;place-items:center;font-size:1.8rem;margin:0 auto 20px}
+#qualificador .qresult h3{font-family:"Bricolage Grotesque",sans-serif;font-size:1.7rem;
+  margin-bottom:8px;color:#f4f3ef}
+#qualificador .qresult .qsub{color:#9b9fab;margin-bottom:26px;font-family:"Hanken Grotesk",sans-serif}
+#qualificador .qrec{background:var(--qs);border:1.5px solid var(--qa);border-radius:16px;
+  padding:26px;text-align:left;margin-bottom:22px}
+#qualificador .qrec .qlabel{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--qa);font-weight:700;margin-bottom:8px;font-family:"Hanken Grotesk",sans-serif}
+#qualificador .qrec .qpname{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
+  font-size:1.5rem;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px;color:#f4f3ef}
+#qualificador .qrec .qpprice{font-size:1rem;color:var(--qgold);font-weight:700}
+#qualificador .qrec .qwhy{color:#d9dae0;font-size:.98rem;margin:14px 0 18px;padding:14px 16px;
+  background:rgba(255,255,255,.03);border-radius:10px;border-left:3px solid var(--qa);
+  font-family:"Hanken Grotesk",sans-serif}
+#qualificador .qrec ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+#qualificador .qrec li{display:flex;gap:10px;font-size:.95rem;color:#d9dae0;font-family:"Hanken Grotesk",sans-serif}
+#qualificador .qrec li .qc{color:var(--qok);flex:none}
+#qualificador .qractions{display:flex;flex-direction:column;gap:12px}
+#qualificador .qractions .qbtn{width:100%}
+#qualificador .qbtn.wa{background:#25d366;border-color:#25d366;color:#fff}
+#qualificador .qbtn.wa:hover{background:#1ebe5a;border-color:#1ebe5a}
+#qualificador .qrestart{background:none;border:none;color:#9b9fab;font-size:.9rem;
+  cursor:pointer;margin-top:8px;text-decoration:underline}
+#qualificador .qrestart:hover{color:#f4f3ef}
+.qhide{display:none}
 
 /* MOBILE */
 @media(max-width:768px){
@@ -390,80 +469,28 @@ footer a{color:var(--green);text-decoration:none}
 </section>
 
 <section id="qualificador">
-  <div class="container">
-    <div class="tag" style="display:block;text-align:center">Primeiro passo</div>
-    <h2 style="text-align:center;margin-bottom:.5rem">Descubra qual estrutura<br><span class="accent">faz sentido para você.</span></h2>
-    <p style="text-align:center;color:var(--muted);margin-bottom:3rem">Responda 3 perguntas rápidas. Nosso sistema analisa seu perfil e indica o próximo passo.</p>
-    <div class="qualif-box">
-      <div class="qualif-progress">
-        <div class="qualif-dot done" id="dot0"></div>
-        <div class="qualif-dot" id="dot1"></div>
-        <div class="qualif-dot" id="dot2"></div>
-      </div>
-      <div class="qualif-step active" id="qs1">
-        <div class="qualif-question">Qual é o tamanho do seu perfil no Instagram?</div>
-        <div class="qualif-options">
-          <label class="qualif-opt" onclick="selectOpt(this,'ig','zero')"><span class="qualif-opt-icon">🆕</span><div class="qualif-opt-text"><strong>Ainda não tenho perfil</strong><span>Estou começando do zero</span></div></label>
-          <label class="qualif-opt" onclick="selectOpt(this,'ig','small')"><span class="qualif-opt-icon">📈</span><div class="qualif-opt-text"><strong>Menos de 500 seguidores</strong><span>Perfil ainda em construção</span></div></label>
-          <label class="qualif-opt" onclick="selectOpt(this,'ig','mid')"><span class="qualif-opt-icon">🚀</span><div class="qualif-opt-text"><strong>500 a 10 mil seguidores</strong><span>Perfil ativo com audiência</span></div></label>
-          <label class="qualif-opt" onclick="selectOpt(this,'ig','big')"><span class="qualif-opt-icon">🌟</span><div class="qualif-opt-text"><strong>10 mil a 30 mil seguidores</strong><span>Perfil consolidado</span></div></label>
-        </div>
-        <div class="qualif-nav"><button class="qualif-btn qualif-btn-next" onclick="nextStep(1)">Próximo →</button></div>
-      </div>
-      <div class="qualif-step" id="qs2">
-        <div class="qualif-question">Qual é o faturamento mensal aproximado do seu negócio?</div>
-        <div class="qualif-options">
-          <label class="qualif-opt" onclick="selectOpt(this,'fat','baixo')"><span class="qualif-opt-icon">💰</span><div class="qualif-opt-text"><strong>Menos de R$ 5.000/mês</strong><span>Negócio em fase inicial</span></div></label>
-          <label class="qualif-opt" onclick="selectOpt(this,'fat','medio')"><span class="qualif-opt-icon">💰💰</span><div class="qualif-opt-text"><strong>R$ 5.000 a R$ 20.000/mês</strong><span>Negócio estabelecido</span></div></label>
-          <label class="qualif-opt" onclick="selectOpt(this,'fat','alto')"><span class="qualif-opt-icon">💰💰💰</span><div class="qualif-opt-text"><strong>Acima de R$ 20.000/mês</strong><span>Negócio em crescimento</span></div></label>
-        </div>
-        <div class="qualif-nav"><button class="qualif-btn qualif-btn-back" onclick="prevStep(2)">← Voltar</button><button class="qualif-btn qualif-btn-next" onclick="nextStep(2)">Próximo →</button></div>
-      </div>
-      <div class="qualif-step" id="qs3">
-        <div class="qualif-question">Onde fica seu negócio?</div>
-        <div class="qualif-options">
-          <label class="qualif-opt" onclick="selectOpt(this,'loc','local')"><span class="qualif-opt-icon">📍</span><div class="qualif-opt-text"><strong>Nazareno, Lavras, São João del Rei ou região</strong><span>Sul de Minas Gerais</span></div></label>
-          <label class="qualif-opt" onclick="selectOpt(this,'loc','mg')"><span class="qualif-opt-icon">🏔️</span><div class="qualif-opt-text"><strong>Outro município de Minas Gerais</strong><span>Interior ou capital</span></div></label>
-          <label class="qualif-opt" onclick="selectOpt(this,'loc','brasil')"><span class="qualif-opt-icon">🇧🇷</span><div class="qualif-opt-text"><strong>Outro estado do Brasil</strong><span>Já tenho criativos próprios</span></div></label>
-        </div>
-        <div class="qualif-nav"><button class="qualif-btn qualif-btn-back" onclick="prevStep(3)">← Voltar</button><button class="qualif-btn qualif-btn-next" onclick="analisarLead()">Analisar meu perfil ✨</button></div>
-      </div>
-      <div class="qualif-step" id="qs-loading">
-        <div style="padding:2rem 0"><div style="font-size:2.5rem;margin-bottom:1rem;display:inline-block;animation:spin 1s linear infinite">⚙️</div><p style="color:var(--muted)">Analisando seu perfil...</p></div>
-      </div>
-      <div class="qualif-step" id="qs-ok">
-        <div class="qualif-result">
-          <div class="emoji">✅</div>
-          <h3>Seu perfil é elegível!</h3>
-          <p id="result-msg">Identificamos que seu negócio tem o perfil certo. Vamos conversar sem compromisso.</p>
-          <a id="result-wa" href="#" class="btn-primary" target="_blank" style="margin:0 auto .75rem;justify-content:center">→ Falar no WhatsApp agora</a><br>
-          <a href="#pacotes" class="btn-ghost" style="display:inline-flex;margin-top:.75rem">Ver pacotes disponíveis</a>
-        </div>
-      </div>
-      <div class="qualif-step" id="qs-espera">
-        <div class="qualif-result">
-          <div class="emoji">📋</div>
-          <h3>Você entrou na lista de espera!</h3>
-          <p>Agradecemos o interesse. Neste momento priorizamos perfis específicos — mas queremos te ajudar quando o momento for certo.</p>
-          <form id="waitlist-form" onsubmit="enviarEspera(event)">
-            <input type="text" id="wl-nome" placeholder="Seu nome" required>
-            <input type="text" id="wl-neg" placeholder="Nome do seu negócio" required>
-            <input type="tel" id="wl-tel" placeholder="WhatsApp com DDD" required>
-            <select id="wl-seg" required><option value="" disabled selected>Segmento do negócio</option><option>Restaurante / Alimentação</option><option>Salão / Barbearia / Estética</option><option>Comércio / Loja</option><option>Serviços</option><option>Saúde</option><option>Outro</option></select>
-            <button type="submit" class="qualif-btn qualif-btn-next" style="width:100%">Entrar na lista de espera</button>
-          </form>
-        </div>
-      </div>
-      <div class="qualif-step" id="qs-confirmado">
-        <div class="qualif-result">
-          <div class="emoji">🙏</div>
-          <h3>Cadastro realizado!</h3>
-          <p>Quando tivermos uma vaga compatível com seu perfil, entraremos em contato. Enquanto isso, acompanhe o conteúdo.</p>
-          <a href="https://instagram.com/siqueiraestrategia" class="btn-ghost" target="_blank" style="display:inline-flex;margin-top:.5rem">→ @siqueiraestrategia</a>
-        </div>
+<div class="qinner">
+  <div class="qhead">
+    <div class="qeyebrow">Primeiro passo</div>
+    <h2>Descubra qual estrutura faz sentido pra você.</h2>
+    <p>Responda 3 perguntas. Nada de empurrar pacote — a gente indica o caminho certo pro seu momento.</p>
+  </div>
+  <div class="qbox">
+    <div id="qsteps">
+      <div class="qprog"><span class="on"></span><span></span><span></span></div>
+      <div id="qstage"></div>
+      <div class="qnav">
+        <button class="qbtn hidden" id="qback">← Voltar</button>
+        <button class="qbtn solid" id="qnext" disabled>Próximo →</button>
       </div>
     </div>
+    <div id="qload" class="qloading qhide">
+      <div class="qspin"></div>
+      <p style="color:#9b9fab;font-family:'Hanken Grotesk',sans-serif">Analisando seu perfil…</p>
+    </div>
+    <div id="qres" class="qresult qhide"></div>
   </div>
+</div>
 </section>
 
 <section id="faq">
@@ -514,95 +541,131 @@ function toggleFaq(btn){
   if(!wasOpen)item.classList.add('open');
 }
 
-const respostas={};
-function selectOpt(el,key,val){
-  el.closest('.qualif-options').querySelectorAll('.qualif-opt').forEach(o=>o.classList.remove('selected'));
-  el.classList.add('selected');
-  respostas[key]=val;
-}
-function showQStep(id){
-  document.querySelectorAll('.qualif-step').forEach(s=>s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-}
-function updateDots(n){
-  [0,1,2].forEach(i=>{const d=document.getElementById('dot'+i);if(d)d.classList.toggle('done',i<n)});
-}
-function nextStep(cur){
-  const keys=['ig','fat','loc'];
-  if(!respostas[keys[cur-1]]){alert('Selecione uma opção para continuar.');return;}
-  updateDots(cur);
-  showQStep('qs'+(cur+1));
-}
-function prevStep(cur){showQStep('qs'+(cur-1));updateDots(cur-2);}
-
 // ── Integração Supabase ──────────────────────────────────────────
 const SUPA_URL='https://fchhdazhmcfkahtrhntz.supabase.co';
 const SUPA_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZjaGhkYXpobWNma2FodHJobnR6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk3NjIwNDEsImV4cCI6MjA5NTMzODA0MX0.lc-QTIL6HyESY7io55Yzft1JOnlsuw3PmLPsdR7OEOw';
-
 async function salvarLeadSupabase(dados){
   try{
     await fetch(SUPA_URL+'/rest/v1/leads',{
-      method:'POST',
-      headers:{
-        'apikey':SUPA_KEY,
-        'Authorization':'Bearer '+SUPA_KEY,
-        'Content-Type':'application/json',
-        'Prefer':'return=minimal'
-      },
-      body:JSON.stringify({
-        nome: dados.nome||'Lead Landing Page',
-        telefone: dados.telefone||'',
-        origem: 'Landing Page',
-        status: 'Novo Lead',
-        notas: dados.notas||''
-      })
+      method:'POST',headers:{'apikey':SUPA_KEY,'Authorization':'Bearer '+SUPA_KEY,
+        'Content-Type':'application/json','Prefer':'return=minimal'},
+      body:JSON.stringify({nome:dados.nome||'Lead Landing Page',telefone:dados.telefone||'',
+        origem:'Landing Page',status:'Novo Lead',notas:dados.notas||''})
     });
-  }catch(err){
-    console.warn('Supabase lead não salvo:',err);
-  }
+  }catch(err){console.warn('Supabase lead não salvo:',err);}
 }
 // ────────────────────────────────────────────────────────────────
 
-async function analisarLead(){
-  if(!respostas.loc){alert('Selecione uma opção para continuar.');return;}
-  updateDots(3);
-  showQStep('qs-loading');
-  const igOk=respostas.ig==='mid'||respostas.ig==='big';
-  const fatOk=respostas.fat==='medio'||respostas.fat==='alto';
-  const locOk=respostas.loc==='local'||respostas.loc==='mg'||respostas.loc==='brasil';
-  const ok=igOk&&fatOk&&locOk;
-  const igMap={zero:'sem perfil ainda',small:'menos de 500 seguidores',mid:'500 a 10k seguidores',big:'10k a 30k seguidores'};
-  const fatMap={baixo:'menos de R$ 5k/mês',medio:'R$ 5k a R$ 20k/mês',alto:'acima de R$ 20k/mês'};
-  const locMap={local:'Sul de Minas (região)',mg:'Minas Gerais',brasil:'outro estado'};
-  const msg=encodeURIComponent('Olá Pablo! Vim pelo site da Siqueira Estratégia.\n\nMeu perfil:\n• Instagram: '+igMap[respostas.ig]+'\n• Faturamento: '+fatMap[respostas.fat]+'\n• Localização: '+locMap[respostas.loc]+'\n\nQuero saber mais sobre os serviços.');
-  await new Promise(r=>setTimeout(r,1600));
-  if(ok){
-    document.getElementById('result-wa').href='https://wa.me/5532985208228?text='+msg;
-    document.getElementById('result-msg').textContent='Perfil com '+igMap[respostas.ig]+', faturamento '+fatMap[respostas.fat]+', localização: '+locMap[respostas.loc]+'. Tudo certo — vamos conversar sobre a melhor estrutura para você.';
-    salvarLeadSupabase({
-      nome:'Lead Qualificado (Quiz)',
-      notas:'Instagram: '+igMap[respostas.ig]+' | Faturamento: '+fatMap[respostas.fat]+' | Localização: '+locMap[respostas.loc]
-    });
-    showQStep('qs-ok');
-  } else {
-    showQStep('qs-espera');
+// ── NOVO QUIZ ────────────────────────────────────────────────────
+const WA="5532985208228";
+const QUESTIONS=[
+  {key:"insta",q:"Qual o tamanho do seu perfil no Instagram?",opts:[
+    {v:"zero",em:"🆕",t:"Ainda não tenho perfil",s:"Estou começando do zero"},
+    {v:"micro",em:"📈",t:"Menos de 500 seguidores",s:"Perfil ainda em construção"},
+    {v:"ativo",em:"🚀",t:"500 a 10 mil seguidores",s:"Perfil ativo com audiência"},
+    {v:"forte",em:"🌟",t:"10 mil a 30 mil seguidores",s:"Perfil consolidado"},
+  ]},
+  {key:"fat",q:"Qual o faturamento mensal aproximado do negócio?",opts:[
+    {v:"baixo",em:"💰",t:"Menos de R$ 5.000/mês",s:"Negócio em fase inicial"},
+    {v:"medio",em:"💰💰",t:"R$ 5.000 a R$ 20.000/mês",s:"Negócio estabelecido"},
+    {v:"alto",em:"💰💰💰",t:"Acima de R$ 20.000/mês",s:"Negócio em crescimento"},
+  ]},
+  {key:"loc",q:"Onde fica o seu negócio?",opts:[
+    {v:"regiao",em:"📍",t:"Nazareno, Lavras, São João del Rei ou região",s:"Sul de Minas Gerais"},
+    {v:"mg",em:"🏔️",t:"Outro município de Minas Gerais",s:"Interior ou capital"},
+    {v:"estado",em:"🇧🇷",t:"Outro estado do Brasil",s:"Já tenho criativos próprios"},
+  ]},
+];
+const PLANS={
+  teste:{label:"Ponto de entrada",name:"Vídeo avulso",price:"R$347 · pontual",
+    bullets:["1 vídeo premium (até 1 min)","Captação presencial + edição","Legenda, trilha e acabamento","Sem mensalidade — você testa antes"]},
+  conteudo:{label:"Recomendado pra você",name:"Conteúdo",price:"R$597/mês",
+    bullets:["4 vídeos curtos por mês","Captação presencial + edição profissional","Legendas, trilha e acabamento","1 ajuste por vídeo"]},
+  crescimento:{label:"Mais escolhido",name:"Crescimento",price:"R$1.097/mês",
+    bullets:["4 vídeos curtos por mês","Planejamento e direção de conteúdo","Gestão de tráfego pago (Meta e Google)","Acompanhamento de métricas"]},
+  autoridade:{label:"Recomendado pra você",name:"Autoridade",price:"R$1.397/mês",
+    bullets:["1 vídeo premium + 4 curtos/mês","Planejamento estratégico completo","Gestão de tráfego + análise mensal","Acompanhamento próximo e prioritário"]},
+  trafego:{label:"Pro seu caso",name:"Gestão de Tráfego",price:"a partir de R$700/mês",
+    bullets:["Gestão de anúncios Meta e Google","Planejamento e segmentação","Análise de desempenho","Você usa seus próprios criativos"]},
+};
+function qRecommend(s){
+  if(s.loc==="estado")return{plan:"trafego",why:"Como você é de fora da região, não fazemos captação presencial — mas cuidamos da estratégia e da gestão dos seus anúncios com os criativos que você já tem."};
+  const presencial=s.loc==="regiao"?"Vamos até o seu negócio com equipamento completo.":"Captação presencial sob disponibilidade de agenda (pode haver deslocamento).";
+  if(s.fat==="alto")return{plan:"autoridade",why:"Seu negócio tem fôlego pra investir em presença forte e gestão estratégica completa. "+presencial};
+  if(s.fat==="medio"){
+    if(s.insta==="zero")return{plan:"conteudo",why:"Antes de escalar anúncios, vale construir uma base de conteúdo consistente. "+presencial};
+    return{plan:"crescimento",why:"Seu momento pede conteúdo e tráfego trabalhando juntos — é onde a maioria dos nossos clientes vê resultado real. "+presencial};
   }
+  if(s.insta==="zero")return{plan:"teste",why:"Pra começar sem comprometer o caixa, o ideal é validar com um primeiro vídeo avulso antes de assinar um plano mensal. "+presencial};
+  return{plan:"conteudo",why:"Você já tem alguma presença — o próximo passo é ganhar constância sem pesar no orçamento. "+presencial};
 }
-function enviarEspera(e){
-  e.preventDefault();
-  const nome=document.getElementById('wl-nome').value;
-  const neg=document.getElementById('wl-neg').value;
-  const tel=document.getElementById('wl-tel').value;
-  const seg=document.getElementById('wl-seg').value;
-  salvarLeadSupabase({
-    nome: nome,
-    telefone: tel,
-    notas: 'Negócio: '+neg+' | Segmento: '+seg+' | Lista de espera'
-  });
-  const msg=encodeURIComponent('LISTA DE ESPERA\nNome: '+nome+'\nNegócio: '+neg+'\nTel: '+tel+'\nSegmento: '+seg);
-  window.open('https://wa.me/5532985208228?text='+msg,'_blank');
-  showQStep('qs-confirmado');
+let qStep=0;
+const qAnswers={};
+const qStageEl=document.getElementById("qstage");
+const qBackBtn=document.getElementById("qback");
+const qNextBtn=document.getElementById("qnext");
+const qProgEl=document.querySelector(".qprog");
+function qRender(){
+  const cur=QUESTIONS[qStep];
+  qProgEl.querySelectorAll("span").forEach((d,i)=>d.classList.toggle("on",i<=qStep));
+  qBackBtn.classList.toggle("hidden",qStep===0);
+  qNextBtn.textContent=qStep===QUESTIONS.length-1?"Analisar meu perfil ✨":"Próximo →";
+  qNextBtn.disabled=!qAnswers[cur.key];
+  qStageEl.innerHTML='<div class="qq">'+cur.q+'</div><div class="qopts">'+
+    cur.opts.map(o=>'<button class="qopt'+(qAnswers[cur.key]===o.v?' sel':'')+'" data-v="'+o.v+'">'+
+      '<span class="em">'+o.em+'</span><span><b>'+o.t+'</b><span class="sub">'+o.s+'</span></span>'+
+      '<span class="qcheck"></span></button>').join('')+'</div>';
+  qStageEl.querySelectorAll(".qopt").forEach(b=>b.addEventListener("click",()=>{
+    qAnswers[cur.key]=b.dataset.v;qRender();
+  }));
 }
+qNextBtn.addEventListener("click",()=>{
+  if(qStep<QUESTIONS.length-1){qStep++;qRender();}else qFinish();
+});
+qBackBtn.addEventListener("click",()=>{if(qStep>0){qStep--;qRender();}});
+function qLabelOf(key){
+  const q=QUESTIONS.find(x=>x.key===key);
+  return q.opts.find(o=>o.v===qAnswers[key]).t;
+}
+function qFinish(){
+  document.getElementById("qsteps").classList.add("qhide");
+  const load=document.getElementById("qload");
+  load.classList.remove("qhide");
+  setTimeout(()=>{
+    load.classList.add("qhide");
+    const r=qRecommend(qAnswers);
+    const p=PLANS[r.plan];
+    const msg="Olá! Fiz a análise no site.%0A"+
+      "• Instagram: "+qLabelOf("insta")+"%0A"+
+      "• Faturamento: "+qLabelOf("fat")+"%0A"+
+      "• Local: "+qLabelOf("loc")+"%0A"+
+      "• Indicação: "+p.name+" ("+p.price+")%0A%0AQuero saber mais.";
+    const wa="https://wa.me/"+WA+"?text="+msg;
+    const res=document.getElementById("qres");
+    res.classList.remove("qhide");
+    res.innerHTML=
+      '<div class="qtick">✓</div>'+
+      '<h3>Encontramos o caminho certo.</h3>'+
+      '<p class="qsub">Com base no seu perfil, essa é a estrutura que faz mais sentido agora:</p>'+
+      '<div class="qrec">'+
+        '<div class="qlabel">'+p.label+'</div>'+
+        '<div class="qpname">'+p.name+' <span class="qpprice">'+p.price+'</span></div>'+
+        '<div class="qwhy">'+r.why+'</div>'+
+        '<ul>'+p.bullets.map(b=>'<li><span class="qc">✓</span>'+b+'</li>').join('')+'</ul>'+
+      '</div>'+
+      '<div class="qractions">'+
+        '<a class="qbtn wa" href="'+wa+'" target="_blank">💬 Falar no WhatsApp agora</a>'+
+        '<a class="qbtn" href="#pacotes">Ver todos os pacotes</a>'+
+        '<button class="qrestart" id="qrestart">↺ Refazer a análise</button>'+
+      '</div>';
+    document.getElementById("qrestart").addEventListener("click",()=>location.reload());
+    salvarLeadSupabase({
+      nome:'Lead Quiz ('+p.name+')',
+      notas:'Instagram: '+qLabelOf("insta")+' | Faturamento: '+qLabelOf("fat")+' | Local: '+qLabelOf("loc")+' | Plano: '+p.name
+    });
+  },1400);
+}
+qRender();
 </script>
 </body>
 </html>
